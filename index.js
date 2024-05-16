@@ -1,22 +1,9 @@
-import express from "express";
-// app
-const app = express();
+// import os from "os";
+// console.log(os.release());
+// console.log(os.version());
+// console.log(os.cpus());
+// console.log(os.freemem());
 
-//listen a server
-const PORT = 8000;
-
-// get API
-app.get("/", (req, res) => {
-  return res.status(200).send("hi this is my first API.");
-}); // call back function , if request pathako cha bhane matra run huncha
-app.get("/sandhya", (req, res) => {
-  return res.status(200).send("good afternoon sandhya");
-});
-//network port range 0 to 65535
-//reserved : 0 to 1023
-//eg: http:80
-//eg: https :443
-//eg: ftp: 21
-app.listen(PORT, () => {
-  console.log(`app is listening on port${PORT}`);
-});
+import fs from "fs";
+fs.writeFileSync("hello.txt", "hello, welcome to MERN");
+fs.appendFileSync("hello.txt", "i dont know whats going on");
